@@ -15,35 +15,57 @@ body {
     color: #333;
 }
 
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif; /* Default font for body text */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Top Banner Styling */
+.top-banner {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 400;
+}
+
 /* Main Header Styling */
 .header-main {
     display: flex;
-    justify-content: center; /* Center all items horizontally */
+    justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     background-color: white;
     border-bottom: 1px solid #e0e0e0;
-    position: relative; /* Allows absolute positioning for icons */
+    position: relative;
 }
 
+/* Logo Styling */
 .site-logo {
     font-family: 'EB Garamond', serif;
-    font-size: 2rem;
+    font-size: 2rem; /* Adjust this size as needed */
     font-weight: 600;
     color: #333;
-    text-align: center;}
+    text-align: center;
+    flex-grow: 1;
+}
 
-/* Icons on the Right Side */
+/* Header Icons Styling */
 .header-icons {
-    position: absolute; /* Positions icons independently from other elements */
-    right: 2rem; /* Aligns icons to the right edge */
+    position: absolute;
+    right: 2rem;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Adjust this for consistent icon spacing */
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
 }
 
@@ -66,9 +88,10 @@ body {
 
 .nav-links li a {
     text-decoration: none;
+    font-family: 'EB Garamond', serif;
     color: #333;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.2rem; /* Slightly larger for navigation links */
+    font-weight: 600;
     transition: color 0.3s;
 }
 
@@ -76,25 +99,38 @@ body {
     color: #666;
 }
 
+/* Section Headings */
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Subheadings and Paragraphs */
+p, h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+}
+
 /* Main Content Styling */
 main {
     padding: 20px;
-}
-
-.product {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: white;
+    text-align: center;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 1rem;
     background-color: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
 }
