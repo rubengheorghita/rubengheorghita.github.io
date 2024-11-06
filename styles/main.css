@@ -18,11 +18,12 @@ body {
 /* Main Header Styling */
 .header-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center all items horizontally */
     align-items: center;
     padding: 1rem 2rem;
     background-color: white;
     border-bottom: 1px solid #e0e0e0;
+    position: relative; /* Allows absolute positioning for icons */
 }
 
 .site-logo {
@@ -30,11 +31,12 @@ body {
     font-size: 2rem;
     font-weight: 600;
     color: #333;
-    text-align: center;
-    flex-grow: 1;
-}
+    text-align: center;}
 
+/* Icons on the Right Side */
 .header-icons {
+    position: absolute; /* Positions icons independently from other elements */
+    right: 2rem; /* Aligns icons to the right edge */
     display: flex;
     gap: 20px;
 }
