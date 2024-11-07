@@ -251,14 +251,14 @@ main {
 
 /* Responsive Design - Mobile Adjustments */
 @media (max-width: 768px) {
-    /* Hide desktop navigation links */
+    /* Forcefully hide desktop navigation links */
     .navbar .nav-links {
-        display: none;
+        display: none !important;
     }
 
-    /* Show the menu icon on mobile */
+    /* Forcefully show menu icon only on mobile */
     .menu-icon {
-        display: inline-block;
+        display: inline-block !important;
     }
 
 
