@@ -37,3 +37,26 @@ document.addEventListener("click", function(event) {
         searchInput.value = ""; // Clear input when closed
     }
 });
+
+// Function to open a panel by ID
+function openPanel(panelId) {
+    document.getElementById(panelId).classList.add('active');
+}
+
+// Function to close a panel by ID
+function closePanel(panelId) {
+    document.getElementById(panelId).classList.remove('active');
+}
+
+// Close panels when clicking outside
+document.addEventListener('click', function(event) {
+    const accountPanel = document.getElementById('account-panel');
+    const cartPanel = document.getElementById('cart-panel');
+
+    if (!accountPanel.contains(event.target) && !cartPanel.contains(event.target)) {
+        if (!event.target.closest('.icon')) { // Exclude icons from closing action
+            closePanel('account-panel');
+            closePanel('cart-panel');
+        }
+    }
+});

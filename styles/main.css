@@ -214,3 +214,65 @@ footer {
         padding: 1rem;
     }
 }
+
+/* Panel Styling */
+.panel {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Panel Heading and Form */
+.panel h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel form input[type="email"],
+.panel form input[type="password"] {
+    padding: 0.5rem;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.panel form button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Show panel by changing its right property */
+.panel.active {
+    right: 0;
+}
