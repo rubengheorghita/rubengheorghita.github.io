@@ -1,105 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David & Ruben</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>David & Ruben</title>
+        
+        <!-- Google Fonts: EB Garamond -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- Google Fonts: EB Garamond -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- Link to CSS file -->
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
     
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-
-<!-- Header Section -->
-<header>
-    <div class="top-banner">
-        <p>Products coming soon.</p>
-    </div>
-
-    <div class="header-main">
-        <!-- Left Icons for Mobile (Menu and Search) -->
-        <div class="header-icons">
-            <!-- Mobile Menu Icon (only visible on mobile) -->
-            <span class="menu-icon icon" onclick="toggleMobileMenu()">
-                <i class="fa-light fa-bars"></i>
-            </span>
-            
-            <!-- Search Icon -->
-            <div class="search-container">
-                <span id="search-icon" class="icon">
-                    <i class="fa-sharp fa-light fa-magnifying-glass"></i>
+    <!-- Header Section -->
+    <header>
+        <div class="top-banner">
+            <p>Products coming soon.</p>
+        </div>
+    
+        <div class="header-main">
+            <!-- Mobile: Left Side Icons (Menu and Search) -->
+            <div class="header-icons">
+                <!-- Mobile Menu Icon (only visible on mobile) -->
+                <span class="menu-icon icon" onclick="toggleMobileMenu()">
+                    <i class="fa fa-bars"></i>
                 </span>
-                <input type="text" id="search-input" class="search-input" placeholder="Search our catalogue">
+                
+                <!-- Search Icon -->
+                <div class="search-container">
+                    <span id="search-icon" class="icon">
+                        <i class="fa fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search our catalogue">
+                </div>
             </div>
-
-            <!-- Centered Logo for Desktop and Mobile -->
+    
+            <!-- Centered Logo -->
             <h1 class="site-logo">David & Ruben</h1>
-
-            <!-- Account and Cart Icons -->
-            <span class="account-icon icon" onclick="openPanel('account-panel')">
-                <i class="fa-light fa-user"></i>
-            </span>
-            <span class="cart-icon icon" onclick="openPanel('cart-panel')">
-                <i class="fa-sharp fa-light fa-bag-shopping"></i>
-            </span>
-         </div>
-        <!-- Account Panel -->
-        <div class="panel" id="account-panel">
-            <button class="close-btn" onclick="closePanel('account-panel')">&times;</button>
-            <h2>My Account</h2>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
-                
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
-                
-                <button type="submit">Sign In</button>
-                <p><a href="#">Forgot your password?</a></p>
-                <hr>
-                <p>Don't have an account?</p>
-                <button type="button">Create an Account</button>
-            </form>
+    
+            <!-- Right Side Icons (Account and Cart) -->
+            <div class="header-icons">
+                <span class="account-icon icon" onclick="openPanel('account-panel')">
+                    <i class="fa fa-user"></i>
+                </span>
+                <span class="cart-icon icon" onclick="openPanel('cart-panel')">
+                    <i class="fa fa-shopping-bag"></i>
+                </span>
+            </div>
+    
+            <!-- Account Panel -->
+            <div class="panel" id="account-panel">
+                <button class="close-btn" onclick="closePanel('account-panel')">&times;</button>
+                <h2>My Account</h2>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    
+                    <button type="submit">Sign In</button>
+                    <p><a href="#">Forgot your password?</a></p>
+                    <hr>
+                    <p>Don't have an account?</p>
+                    <button type="button">Create an Account</button>
+                </form>
+            </div>
+    
+            <!-- Cart Panel -->
+            <div class="panel" id="cart-panel">
+                <button class="close-btn" onclick="closePanel('cart-panel')">&times;</button>
+                <h2>Shopping Cart</h2>
+                <p>Your cart is currently empty.</p>
+                <!-- Add cart items dynamically or list items here if available -->
+            </div>
         </div>
-
-        <!-- Cart Panel -->
-        <div class="panel" id="cart-panel">
-            <button class="close-btn" onclick="closePanel('cart-panel')">&times;</button>
-            <h2>Shopping Cart</h2>
-            <p>Your cart is currently empty.</p>
-            <!-- Add cart items dynamically or list items here if available -->
+    
+        <!-- Desktop Navigation Menu (Hidden on Mobile) -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sample.html">Sample Kit</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Mobile Slide-out Menu Panel -->
+        <div class="mobile-menu-panel" id="mobile-menu">
+            <button class="mobile-menu-close-btn" onclick="toggleMobileMenu()">&times;</button>
+            <ul class="mobile-menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sample.html">Sample Kit</a></li>
+            </ul>
         </div>
-    </div>
-
-    <!-- Desktop Navigation Menu (Hidden on Mobile) -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="explore.html">Explore</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="sample.html">Sample Kit</a></li>
-        </ul>
-    </nav>
-
-    <!-- Mobile Slide-out Menu Panel -->
-    <div class="mobile-menu-panel" id="mobile-menu">
-        <button class="mobile-menu-close-btn" onclick="toggleMobileMenu()">&times;</button>
-        <ul class="mobile-menu-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="explore.html">Explore</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="sample.html">Sample Kit</a></li>
-        </ul>
-    </div>
-</header>
+    </header>
 
 
     <!-- Image Section (Place it here) -->

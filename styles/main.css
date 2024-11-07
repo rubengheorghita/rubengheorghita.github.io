@@ -20,7 +20,7 @@ body {
 /* Main Header Styling */
 .header-main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
     background-color: white;
@@ -93,7 +93,6 @@ body {
     transition: width 0.3s ease;
 }
 
-/* Show Search Input Field */
 .search-container.active .search-input {
     display: block;
 }

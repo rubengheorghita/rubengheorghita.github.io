@@ -65,28 +65,28 @@ document.addEventListener('click', function(event) {
 });
 
 // JavaScript to toggle the mobile menu
-document.getElementById('mobile-menu-icon').addEventListener('click', function(event) {
+document.querySelector('.menu-icon').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent triggering outside click handler
-    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenu = document.querySelector('.mobile-menu-panel');
     mobileMenu.classList.toggle('active');
 });
 
 // Close mobile menu if clicking outside
 document.addEventListener('click', function(event) {
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuIcon = document.getElementById('mobile-menu-icon');
+    const mobileMenu = document.querySelector('.mobile-menu-panel');
+    const menuIcon = document.querySelector('.menu-icon');
 
     if (!mobileMenu.contains(event.target) && event.target !== menuIcon) {
         mobileMenu.classList.remove('active');
     }
 });
 
-// Toggle mobile menu visibility
+// Toggle mobile menu visibility function for calling
 function toggleMobileMenu() {
-    document.querySelector('.mobile-menu').classList.toggle('active');
+    document.querySelector('.mobile-menu-panel').classList.toggle('active');
 }
 
 // Prevent unwanted menu closing when interacting with menu items
-document.querySelector('.mobile-menu').addEventListener('click', function(event) {
+document.querySelector('.mobile-menu-panel').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent closing the menu when clicking inside
 });
