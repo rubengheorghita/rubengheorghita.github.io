@@ -3,11 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # This is the branch you want to deploy from; change if using a different branch
+      - main
 
 permissions:
-    
-  contents: read
+  contents: write
 
 jobs:
   deploy:
