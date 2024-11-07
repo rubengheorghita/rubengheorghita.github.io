@@ -167,6 +167,7 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 1rem;
 }
 
 .footer-section {
@@ -210,7 +211,7 @@ main {
 .footer-bottom p {
     color: #777;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 /* Social Media Icons Styling */
@@ -218,7 +219,7 @@ main {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .social-icons a {
