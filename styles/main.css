@@ -156,10 +156,19 @@ main {
 
 /* Footer Styling */
 .footer {
-    background-color: #111;
+    background-color: #111; /* Dark background for high contrast */
     color: white;
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+    text-align: left;
 }
 
 /* Social Media Icon Styling */
@@ -170,36 +179,26 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.social-icons a {
-    color: white;
+.social-icons i {
     font-size: 1.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #fff;
+    transition: color 0.3s;
 }
 
-.social-icons a:hover {
+.social-icons i:hover {
     color: #ccc;
-    transform: scale(1.1);
 }
 
-/* Footer Content */
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 1rem;
-    text-align: center;
-}
-
+/* Footer Sections */
 .footer-section {
     flex: 1;
     min-width: 200px;
 }
 
 .footer-section h4 {
-    color: white;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .footer-section ul {
