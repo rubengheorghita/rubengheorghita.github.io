@@ -54,7 +54,7 @@ document.addEventListener('click', function(event) {
     const cartPanel = document.getElementById('cart-panel');
 
     if (!accountPanel.contains(event.target) && !cartPanel.contains(event.target)) {
-        if (!event.target.closest('.icon')) { // Exclude icons from closing action
+        if (!event.target.closest('.icon-text')) { // Exclude text icons from closing action
             closePanel('account-panel');
             closePanel('cart-panel');
         }
