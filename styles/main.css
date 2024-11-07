@@ -214,7 +214,7 @@ main {
     margin: 0;
 }
 
-/* Social Media Icons Styling */
+/* Social Media Icon Styling */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -227,14 +227,15 @@ main {
 }
 
 .social-icon {
-    width: 30px;
+    width: 30px; /* Adjust size as needed */
     height: 30px;
-    filter: brightness(0) invert(1); /* Makes the icon white to blend with the footer */
+    object-fit: contain; /* Ensures the image fits without stretching */
+    filter: invert(1); /* Inverts colors if needed to make the icons white */
     transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+    transform: scale(1.1); /* Slightly enlarges on hover */
 }
 
 /* Style for the Homepage Hero Image */
