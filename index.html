@@ -17,57 +17,39 @@
 <body>
 
 <!-- Header Section -->
-<header>
+ <header>
     <div class="top-banner">
         <p>Products coming soon.</p>
     </div>
 
     <div class="header-main">
+        <!-- Mobile Menu and Search Icons (Visible only on mobile) -->
+        <div class="mobile-icons">
+            <i class="fa-light fa-bars" id="mobile-menu-icon"></i> <!-- Menu Icon for Mobile -->
+            <i class="fa-sharp fa-light fa-magnifying-glass" id="mobile-search-icon"></i> <!-- Search Icon for Mobile -->
+        </div>
+
         <!-- Centered Logo or Title -->
         <h1 class="site-logo">David & Ruben</h1>
 
-        <!-- Icons on the Right -->
+        <!-- Account and Cart Icons (on the right for mobile and desktop) -->
         <div class="header-icons">
-            <!-- Search Text with Dropdown -->
-            <div class="search-container">
-                <span id="search-icon" class="icon-text">Search</span>
-                <input type="text" id="search-input" class="search-input" placeholder="Search our catalogue">
-            </div>
-            
-            <!-- Account and Cart Text Icons -->
-            <span class="icon-text" onclick="openPanel('account-panel')">Account</span>
-            <span class="icon-text" onclick="openPanel('cart-panel')">Cart</span>
-        </div>
-        
-        <!-- Account Panel -->
-        <div class="panel" id="account-panel">
-            <button class="close-btn" onclick="closePanel('account-panel')">&times;</button>
-            <h2>My Account</h2>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
-                
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
-                
-                <button type="submit">Sign In</button>
-                <p><a href="#">Forgot your password?</a></p>
-                <hr>
-                <p>Don't have an account?</p>
-                <button type="button">Create an Account</button>
-            </form>
-        </div>
-        
-        <!-- Cart Panel -->
-        <div class="panel" id="cart-panel">
-            <button class="close-btn" onclick="closePanel('cart-panel')">&times;</button>
-            <h2>Shopping Cart</h2>
-            <p>Your cart is currently empty.</p>
-            <!-- Add cart items dynamically or list items here if available -->
+            <i class="fa-light fa-user" id="account-icon" onclick="openPanel('account-panel')"></i> <!-- Account Icon -->
+            <i class="fa-sharp fa-light fa-bag-shopping" id="cart-icon" onclick="openPanel('cart-panel')"></i> <!-- Cart Icon -->
         </div>
     </div>
 
-    <!-- Navigation Menu -->
+    <!-- Mobile Menu (Hidden initially) -->
+    <nav class="mobile-menu">
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sample.html">Sample Kit</a></li>
+        </ul>
+    </nav>
+
+    <!-- Desktop Navigation Menu -->
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li> <!-- Current page link -->
@@ -78,7 +60,32 @@
         </ul>
     </nav>
 
-</header>
+    <!-- Account Panel -->
+    <div class="panel" id="account-panel">
+        <button class="close-btn" onclick="closePanel('account-panel')">&times;</button>
+        <h2>My Account</h2>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            
+            <button type="submit">Sign In</button>
+            <p><a href="#">Forgot your password?</a></p>
+            <hr>
+            <p>Don't have an account?</p>
+            <button type="button">Create an Account</button>
+        </form>
+    </div>
+
+    <!-- Cart Panel -->
+    <div class="panel" id="cart-panel">
+        <button class="close-btn" onclick="closePanel('cart-panel')">&times;</button>
+        <h2>Shopping Cart</h2>
+        <p>Your cart is currently empty.</p>
+    </div>
+ </header>
 
     <!-- Image Section (Place it here) -->
     <section class="homepage-image">

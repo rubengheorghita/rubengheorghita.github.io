@@ -60,3 +60,19 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
+// JavaScript to toggle the mobile menu
+document.getElementById('mobile-menu-icon').addEventListener('click', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.toggle('active');
+});
+
+// JavaScript to close the menu if you click outside of it
+document.addEventListener('click', function(event) {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuIcon = document.getElementById('mobile-menu-icon');
+
+    if (!mobileMenu.contains(event.target) && event.target !== menuIcon) {
+        mobileMenu.classList.remove('active');
+    }
+});

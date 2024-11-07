@@ -52,12 +52,12 @@ body {
     color: #666;
 }
 
-/* Header Icons Styling */
-.header-icons {
-    position: absolute;
-    right: 2rem;
-    display: flex;
-    gap: 20px;
+/* Styling for New Header Icons */
+.header-icons i, .mobile-icons i {
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    margin: 0 10px;
 }
 
 .icon {
@@ -252,34 +252,107 @@ main {
 
 /* Responsive Design - Mobile Adjustments */
 @media (max-width: 768px) {
+    /* Centering the Logo */
     .site-logo {
         font-size: 1.8rem;
+        flex-grow: 1;
+        text-align: center;
     }
 
-    .nav-links {
-        flex-direction: column;
+    /* Hide the Desktop Navbar */
+    .navbar {
+        display: none;
+    }
+
+    /* Header Layout Adjustments for Mobile */
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    /* Positioning for Mobile Icons */
+    .mobile-icons {
+        display: flex;
         gap: 15px;
     }
 
+    /* Adjusting Icons Layout for Mobile */
     .header-icons {
-        position: static;
-        justify-content: center;
-        margin-top: 1rem;
+        display: flex;
+        gap: 15px;
     }
 
+    /* Styles for the Menu Icon and Search on Left */
+    .menu-icon {
+        cursor: pointer;
+        font-size: 1.5rem; /* Adjust as needed */
+    }
+
+    .search-icon {
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    /* Adjust Account and Cart Icons on Right */
     .icon {
-        width: 18px;
-        height: 18px;
+        font-size: 1.5rem;
+        color: #333;
+        cursor: pointer;
     }
 
+    /* Footer Adjustments */
     .footer {
         font-size: 0.7rem;
         padding: 0.5rem;
     }
 
+    /* Padding for Main Content */
     main {
         padding: 1rem;
     }
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden off-screen on the left */
+    width: 250px;
+    height: 100%;
+    background-color: #111; /* Dark background for contrast */
+    color: white;
+    padding-top: 60px; /* Space for the menu items */
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000;
+}
+
+/* Show the menu when active */
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333; /* Subtle divider */
+}
+
+.mobile-menu ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.mobile-menu ul li a:hover {
+    color: white; /* Highlighted color on hover */
 }
 
 /* Panel Styling */
