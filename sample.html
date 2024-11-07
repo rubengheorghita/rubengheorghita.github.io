@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David & Ruben</title>
+    
+    <!-- Google Fonts: EB Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="top-banner">
+        <p>Products coming soon.</p>
+    </div>
+
+    <div class="header-main">
+        <!-- Centered Logo or Title -->
+        <h1 class="site-logo">David & Ruben</h1>
+
+        <!-- Icons on the Right -->
+        <div class="header-icons">
+            <!-- Search Text with Dropdown -->
+            <div class="search-container">
+                <span id="search-icon" class="icon-text">Search</span>
+                <input type="text" id="search-input" class="search-input" placeholder="Search our catalogue">
+            </div>
+            
+            <!-- Account and Cart Text Icons -->
+            <span class="icon-text" onclick="openPanel('account-panel')">Account</span>
+            <span class="icon-text" onclick="openPanel('cart-panel')">Cart</span>
+        </div>
+        
+        <!-- Account Panel -->
+        <div class="panel" id="account-panel">
+            <button class="close-btn" onclick="closePanel('account-panel')">&times;</button>
+            <h2>My Account</h2>
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                
+                <button type="submit">Sign In</button>
+                <p><a href="#">Forgot your password?</a></p>
+                <hr>
+                <p>Don't have an account?</p>
+                <button type="button">Create an Account</button>
+            </form>
+        </div>
+        
+        <!-- Cart Panel -->
+        <div class="panel" id="cart-panel">
+            <button class="close-btn" onclick="closePanel('cart-panel')">&times;</button>
+            <h2>Shopping Cart</h2>
+            <p>Your cart is currently empty.</p>
+            <!-- Add cart items dynamically or list items here if available -->
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> <!-- Current page link -->
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sample.html">Sample Kit</a></li>
+        </ul>
+    </nav>
+
+</header>
+    
+    <!-- Main Content -->
+    <main>
+        <h2>Sample Kit</h2>
+        <p>Coming Soon</p>
+    </main>
+    
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Social Media Icons -->
+            <div class="footer-section social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube-icon.png" alt="YouTube" class="social-icon">
+                </a>
+            </div>
+    
+            <!-- Other sections (Services, Fragrances, Account & Legal) -->
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Delivery Countries</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <!-- Other footer sections... -->
+    
+            <div class="footer-bottom">
+                <p>© 2024 David & Ruben. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

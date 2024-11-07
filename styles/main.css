@@ -1,0 +1,415 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Top Banner Styling */
+.top-banner {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Main Header Styling */
+.header-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+/* Logo Styling */
+.site-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Styling for Text Icons as Links (Search, Account, Cart) */
+.icon-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.icon-text:hover {
+    color: #666;
+}
+
+/* Styling for New Header Icons */
+.header-icons i, .mobile-icons i {
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    color: #333;
+}
+
+/* Search Container Styling */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+#search-icon {
+    cursor: pointer;
+}
+
+/* Search Input Field (Initially Hidden) */
+.search-input {
+    display: none;
+    width: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+/* Show Search Input Field */
+.search-container.active .search-input {
+    display: block;
+}
+
+/* Navigation Menu Styling */
+.navbar {
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 0.5rem 2rem;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #666;
+}
+
+/* Section Headings (Like "Scented Icons") */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Subheadings and Paragraphs */
+p, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+    text-align: center;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #000000; /* Dark background for high contrast */
+    color: white;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Social Media Icon Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #ccc;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Style for the Homepage Hero Image */
+.homepage-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: white;
+}
+
+.hero-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design - Mobile Adjustments */
+@media (max-width: 768px) {
+    /* Hide the desktop navigation links */
+    .navbar .nav-links {
+        display: none;
+    }
+
+    /* Center and adjust the logo font size on mobile */
+    .site-logo {
+        font-size: 1.8rem;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    /* Header Icons on Mobile */
+    .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Adjust the icon size and style */
+    .icon {
+        font-size: 1.4rem;
+        color: #333;
+        cursor: pointer;
+    }
+
+    /* Left-align menu and search icons; right-align account and cart icons */
+    .header-icons .menu-icon,
+    .header-icons .search-icon {
+        order: 1;
+    }
+    .header-icons .account-icon,
+    .header-icons .cart-icon {
+        order: 2;
+    }
+
+    /* Menu Icon Styling */
+    .menu-icon {
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    /* Mobile slide-out menu panel styling */
+    .mobile-menu-panel {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Initially hidden off-screen on the left */
+        width: 250px;
+        height: 100%;
+        background-color: #111; /* Dark background for contrast */
+        color: white;
+        padding: 60px 20px; /* Space for the menu items */
+        transition: left 0.3s ease; /* Smooth transition */
+        z-index: 1000;
+    }
+
+    /* Show the mobile menu panel when active */
+    .mobile-menu-panel.active {
+        left: 0;
+    }
+
+    /* Mobile menu close button */
+    .mobile-menu-close-btn {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    /* Mobile Menu Links */
+    .mobile-menu-links {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .mobile-menu-links li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu-links li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        transition: color 0.3s;
+    }
+
+    .mobile-menu-links li a:hover {
+        color: #ddd;
+    }
+}
+
+/* Panel Styling */
+.panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Panel Heading and Form */
+.panel h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel form input[type="email"],
+.panel form input[type="password"] {
+    padding: 0.5rem;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.panel form button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Show panel by changing its right property */
+.panel.active {
+    right: 0;
+}
