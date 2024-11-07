@@ -25,3 +25,15 @@ document.getElementById("search-icon").addEventListener("click", function() {
         searchInput.value = ""; // Clear input if closed
     }
 });
+
+// Close search input if clicking outside
+document.addEventListener("click", function(event) {
+    const searchContainer = document.querySelector(".search-container");
+    const searchInput = document.getElementById("search-input");
+
+    // Check if the click happened outside the search container
+    if (!searchContainer.contains(event.target) && searchContainer.classList.contains("active")) {
+        searchContainer.classList.remove("active");
+        searchInput.value = ""; // Clear input when closed
+    }
+});
