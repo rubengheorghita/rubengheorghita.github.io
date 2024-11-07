@@ -156,7 +156,7 @@ main {
 
 /* Footer Styling */
 .footer {
-    background-color: #111; /* Dark background for high contrast */
+    background-color: #000000; /* Dark background for high contrast */
     color: white;
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
