@@ -48,26 +48,30 @@ function closePanel(panelId) {
     document.getElementById(panelId).classList.remove('active');
 }
 
-// Close panels when clicking outside
+// Close account and cart panels when clicking outside
 document.addEventListener('click', function(event) {
     const accountPanel = document.getElementById('account-panel');
     const cartPanel = document.getElementById('cart-panel');
+    const accountIcon = document.querySelector('.account-icon');
+    const cartIcon = document.querySelector('.cart-icon');
 
-    if (!accountPanel.contains(event.target) && !cartPanel.contains(event.target)) {
-        if (!event.target.closest('.icon-text')) { // Exclude text icons from closing action
-            closePanel('account-panel');
-            closePanel('cart-panel');
-        }
+    // Close panels if the click happened outside both the panel and its respective icon
+    if (!accountPanel.contains(event.target) && event.target !== accountIcon) {
+        closePanel('account-panel');
+    }
+    if (!cartPanel.contains(event.target) && event.target !== cartIcon) {
+        closePanel('cart-panel');
     }
 });
 
 // JavaScript to toggle the mobile menu
-document.getElementById('mobile-menu-icon').addEventListener('click', function() {
+document.getElementById('mobile-menu-icon').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent triggering outside click handler
     const mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.classList.toggle('active');
 });
 
-// JavaScript to close the menu if you click outside of it
+// Close mobile menu if clicking outside
 document.addEventListener('click', function(event) {
     const mobileMenu = document.querySelector('.mobile-menu');
     const menuIcon = document.getElementById('mobile-menu-icon');
@@ -75,4 +79,14 @@ document.addEventListener('click', function(event) {
     if (!mobileMenu.contains(event.target) && event.target !== menuIcon) {
         mobileMenu.classList.remove('active');
     }
+});
+
+// Toggle mobile menu visibility
+function toggleMobileMenu() {
+    document.querySelector('.mobile-menu').classList.toggle('active');
+}
+
+// Prevent unwanted menu closing when interacting with menu items
+document.querySelector('.mobile-menu').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent closing the menu when clicking inside
 });
