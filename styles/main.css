@@ -155,16 +155,85 @@ main {
 }
 
 /* Footer Styling */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #aaa; /* Subtle gray for footer text */
+.footer {
+    background-color: #111; /* Dark background for high contrast */
+    color: white;
+    padding: 2rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem; /* Smaller font size for subtlety */
-    position: static;
-    bottom: 0;
-    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes the icon white to blend with the footer */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
 
 /* Style for the Homepage Hero Image */
