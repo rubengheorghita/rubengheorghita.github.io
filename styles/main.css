@@ -121,3 +121,18 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Style for the Homepage Hero Image */
+.homepage-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: white; /* Matches website background */
+}
+
+.hero-image {
+    max-width: 80%; /* Adjust this percentage to control image size */
+    height: auto;
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
