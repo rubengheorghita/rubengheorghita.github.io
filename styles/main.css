@@ -117,7 +117,7 @@ footer {
     color: #aaa; /* Subtle gray for footer text */
     font-family: 'Poppins', sans-serif;
     font-size: 0.8rem; /* Smaller font size for subtlety */
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
 }
