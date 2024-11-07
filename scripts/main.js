@@ -11,3 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Toggle search input visibility on click
+document.getElementById("search-icon").addEventListener("click", function() {
+    const searchContainer = document.querySelector(".search-container");
+    searchContainer.classList.toggle("active");
+    
+    // Focus on the input field when it appears
+    const searchInput = document.getElementById("search-input");
+    if (searchContainer.classList.contains("active")) {
+        searchInput.focus();
+    } else {
+        searchInput.value = ""; // Clear input if closed
+    }
+});

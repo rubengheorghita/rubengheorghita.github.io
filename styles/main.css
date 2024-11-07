@@ -53,6 +53,37 @@ body {
     color: #333;
 }
 
+/* Search Container Styling */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+#search-icon {
+    cursor: pointer;
+}
+
+/* Search Input Field (Initially Hidden) */
+.search-input {
+    display: none; /* Hidden initially */
+    width: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+/* Show Search Input Field */
+.search-container.active .search-input {
+    display: block;
+}
+
 /* Navigation Menu Styling */
 .navbar {
     background-color: white;
