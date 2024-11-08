@@ -42,9 +42,9 @@ document.addEventListener("click", function(event) {
 });
 
 // Function to open a panel by ID and stop event propagation
-function openPanel(panelId) {
-    document.getElementById(panelId).classList.add('active');
+function openPanel(panelId, event) {
     event.stopPropagation(); // Prevent the document-level click listener from closing the panel
+    document.getElementById(panelId).classList.add('active');
 }
 
 // Function to close a panel by ID
