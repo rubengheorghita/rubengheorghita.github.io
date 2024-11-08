@@ -251,18 +251,18 @@ main {
 
 /* Responsive Design - Mobile Adjustments */
 @media (max-width: 768px) {
-    /* Hide the desktop navigation links */
+    /* Forcefully hide desktop navigation links */
     .navbar .nav-links {
         display: none !important;
     }
 
-    /* Show and order mobile icons properly */
+    /* Mobile Header Icons Container */
     .header-icons {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 10px;
         width: 100%;
+        padding: 0 15px; /* Brings icons closer to edges */
     }
 
     /* Menu Icon Styling */
@@ -270,7 +270,7 @@ main {
         display: inline-block !important;
         font-size: 1.4rem;
         order: 1;
-        margin-right: auto; /* Align to the far left */
+        margin-right: auto; /* Aligns to the far left */
     }
 
     /* Search Icon Styling */
@@ -278,12 +278,19 @@ main {
         display: inline-block !important;
         font-size: 1.4rem;
         order: 2;
-        margin-left: 5px;
+        margin-left: 10px; /* Sits next to the menu icon */
+    }
+
+    /* Center and adjust the logo font size on mobile */
+    .site-logo {
+        font-size: 1.8rem;
+        text-align: center;
+        flex-grow: 1;
     }
 
     /* Account Icon Styling */
     .account-icon {
-        display: inline-block !important;
+        display: inline-block;
         font-size: 1.4rem;
         order: 3;
         margin-left: auto; /* Pushes it to the right side */
@@ -291,10 +298,10 @@ main {
 
     /* Cart Icon Styling */
     .cart-icon {
-        display: inline-block !important;
+        display: inline-block;
         font-size: 1.4rem;
         order: 4;
-        margin-left: 5px;
+        margin-left: 5px; /* Moves cart icon closer to the right edge */
     }
 
     /* Mobile slide-out menu panel styling */
