@@ -55,21 +55,26 @@ body {
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 30px;
     position: absolute;
-    right: 2rem; /* Moves the icons to the right side */
+    right: 2rem; /* Keeps the icons on the right */
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Search Container Styling */
+/* Ensuring the icons appear in the correct order */
 .search-container {
     display: inline-block;
-    margin-right: 10px; /* Adjust space between icons as needed */
+    margin-right: auto; /* Pushes search icon to the far left */
+    order: 1;
 }
 
-#search-icon {
-    cursor: pointer;
+.account-icon {
+    margin-right: 15px; /* Adds space between the icons */
+    order: 2; /* Keeps account icon in the middle */
+}
+
+.cart-icon {
+    order: 3; /* Places cart icon to the far right */
 }
 
 /* Search Input Field */
