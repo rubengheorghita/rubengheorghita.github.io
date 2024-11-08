@@ -259,6 +259,8 @@ main {
     /* Forcefully show menu icon only on mobile */
     .menu-icon {
         display: inline-block !important;
+        order: 1;
+        margin-right: 10px; /* Moves menu icon closer to the left edge */
     }
 
 
@@ -276,6 +278,7 @@ main {
         gap: 15px;
         justify-content: space-between;
         width: 100%;
+        padding: 0 10px;
     }
 
     /* Adjust the icon size and style */
@@ -286,13 +289,19 @@ main {
     }
 
     /* Left-align menu and search icons; right-align account and cart icons */
-    .header-icons .menu-icon,
-    .header-icons .search-icon {
-        order: 1;
-    }
-    .header-icons .account-icon,
-    .header-icons .cart-icon {
+    .search-icon {
         order: 2;
+        margin-right: auto; /* Ensures it sits next to the menu icon */
+    }
+
+    .account-icon {
+        order: 3;
+        margin-left: auto; /* Pushes it to the right side */
+    }
+
+    .cart-icon {
+        order: 4;
+        margin-left: 10px; /* Moves cart icon closer to the right edge */
     }
 
     /* Menu Icon Styling */
