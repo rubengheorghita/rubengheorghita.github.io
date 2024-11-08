@@ -251,62 +251,50 @@ main {
 
 /* Responsive Design - Mobile Adjustments */
 @media (max-width: 768px) {
-    /* Forcefully hide desktop navigation links */
+    /* Hide the desktop navigation links */
     .navbar .nav-links {
         display: none !important;
     }
 
-    /* Forcefully show menu icon only on mobile */
-    .menu-icon {
-        display: inline-block !important;
-        order: 1;
-        margin-right: 10px; /* Moves menu icon closer to the left edge */
-    }
-
-    /* Center and adjust the logo font size on mobile */
-    .site-logo {
-        font-size: 1.8rem;
-        text-align: center;
-        flex-grow: 1;
-    }
-
-    /* Header Icons on Mobile */
+    /* Show and order mobile icons properly */
     .header-icons {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 10px;
         width: 100%;
-        padding: 0 10px; /* Brings icons closer to the edges */
-        gap: 15px;
     }
 
-    /* Adjust the icon size and style */
-    .icon {
+    /* Menu Icon Styling */
+    .menu-icon {
+        display: inline-block !important;
         font-size: 1.4rem;
-        color: #333;
-        cursor: pointer;
+        order: 1;
+        margin-right: auto; /* Align to the far left */
     }
 
-    /* Left-align menu and search icons; right-align account and cart icons */
+    /* Search Icon Styling */
     .search-icon {
+        display: inline-block !important;
+        font-size: 1.4rem;
         order: 2;
-        margin-right: auto; /* Ensures it sits next to the menu icon */
+        margin-left: 5px;
     }
 
+    /* Account Icon Styling */
     .account-icon {
+        display: inline-block !important;
+        font-size: 1.4rem;
         order: 3;
         margin-left: auto; /* Pushes it to the right side */
     }
 
+    /* Cart Icon Styling */
     .cart-icon {
-        order: 4;
-        margin-left: 10px; /* Moves cart icon closer to the right edge */
-    }
-
-    /* Mobile Menu Icon Styling */
-    .menu-icon {
+        display: inline-block !important;
         font-size: 1.4rem;
-        cursor: pointer;
+        order: 4;
+        margin-left: 5px;
     }
 
     /* Mobile slide-out menu panel styling */
