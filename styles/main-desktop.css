@@ -337,3 +337,15 @@ main {
 .panel.active {
     right: 0;
 }
+
+/* Hide mobile menu on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-panel {
+        display: none;
+    }
+
+    /* Hide any placeholder navigation if it's unnecessary */
+    .navbar-placeholder, .mobile-menu-links {
+        display: none;
+    }
+}
