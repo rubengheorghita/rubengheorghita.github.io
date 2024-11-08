@@ -41,12 +41,10 @@ document.addEventListener("click", function(event) {
     }
 });
 
-// Function to open a panel by ID
 function openPanel(panelId) {
     document.getElementById(panelId).classList.add('active');
 }
 
-// Function to close a panel by ID
 function closePanel(panelId) {
     document.getElementById(panelId).classList.remove('active');
 }
