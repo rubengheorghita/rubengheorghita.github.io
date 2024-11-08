@@ -45,6 +45,8 @@ body {
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
+    color: #333; /* Ensure this color is visible against your background */
+    display: inline-block; /* Ensure icons are displayed */
 }
 
 /* Individual Icon Styling */
