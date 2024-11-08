@@ -52,18 +52,20 @@ body {
     color: #666;
 }
 
-/* Styling for Header Icons */
-.header-icons i, .mobile-icons i {
-    font-size: 1.2rem;
-    color: #333;
-    cursor: pointer;
-    margin: 0 10px;
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 2rem; /* Moves the icons to the right side */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Search Container Styling */
 .search-container {
-    position: relative;
     display: inline-block;
+    margin-right: 10px; /* Adjust space between icons as needed */
 }
 
 #search-icon {
