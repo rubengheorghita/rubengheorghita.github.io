@@ -258,105 +258,105 @@ main {
 
     /* Mobile Header Icons Container */
     .header-icons {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 15px; /* Brings icons closer to edges */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding: 0 15px !important; /* Brings icons closer to edges */
     }
 
     /* Menu Icon Styling */
     .menu-icon {
         display: inline-block !important;
-        font-size: 1.4rem;
-        order: 1;
-        margin-right: auto; /* Aligns to the far left */
+        font-size: 1.4rem !important;
+        order: 1 !important;
+        margin-right: auto !important; /* Aligns to the far left */
     }
 
     /* Search Icon Styling */
     .search-icon {
         display: inline-block !important;
-        font-size: 1.4rem;
-        order: 2;
-        margin-left: 10px; /* Sits next to the menu icon */
+        font-size: 1.4rem !important;
+        order: 2 !important;
+        margin-left: 10px !important; /* Sits next to the menu icon */
     }
 
     /* Center and adjust the logo font size on mobile */
     .site-logo {
-        font-size: 1.8rem;
-        text-align: center;
-        flex-grow: 1;
+        font-size: 1.8rem !important;
+        text-align: center !important;
+        flex-grow: 1 !important;
     }
 
     /* Account Icon Styling */
     .account-icon {
-        display: inline-block;
-        font-size: 1.4rem;
-        order: 3;
-        margin-left: auto; /* Pushes it to the right side */
+        display: inline-block !important;
+        font-size: 1.4rem !important;
+        order: 3 !important;
+        margin-left: auto !important; /* Pushes it to the right side */
     }
 
     /* Cart Icon Styling */
     .cart-icon {
-        display: inline-block;
-        font-size: 1.4rem;
-        order: 4;
-        margin-left: 5px; /* Moves cart icon closer to the right edge */
+        display: inline-block !important;
+        font-size: 1.4rem !important;
+        order: 4 !important;
+        margin-left: 5px !important; /* Moves cart icon closer to the right edge */
     }
 
     /* Mobile slide-out menu panel styling */
     .mobile-menu-panel {
-        position: fixed;
-        top: 0;
-        left: -100%; /* Initially hidden off-screen on the left */
-        width: 250px;
-        height: 100%;
-        background-color: #111; /* Dark background for contrast */
-        color: white;
-        padding: 60px 20px; /* Space for the menu items */
-        transition: left 0.3s ease; /* Smooth transition */
-        z-index: 1000;
+        position: fixed !important;
+        top: 0 !important;
+        left: -100% !important; /* Initially hidden off-screen on the left */
+        width: 250px !important;
+        height: 100% !important;
+        background-color: #111 !important; /* Dark background for contrast */
+        color: white !important;
+        padding: 60px 20px !important; /* Space for the menu items */
+        transition: left 0.3s ease !important; /* Smooth transition */
+        z-index: 1000 !important;
     }
 
     /* Show the mobile menu panel when active */
     .mobile-menu-panel.active {
-        left: 0;
+        left: 0 !important;
     }
 
     /* Mobile menu close button */
     .mobile-menu-close-btn {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 15px;
+        font-size: 1.5rem !important;
+        font-weight: bold !important;
+        color: white !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        position: absolute !important;
+        top: 15px !important;
+        right: 15px !important;
     }
 
     /* Mobile Menu Links */
     .mobile-menu-links {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 20px 0 !important;
     }
 
     .mobile-menu-links li {
-        margin: 15px 0;
+        margin: 15px 0 !important;
     }
 
     .mobile-menu-links li a {
-        color: #ccc;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 400;
-        transition: color 0.3s;
+        color: #ccc !important;
+        text-decoration: none !important;
+        font-size: 1.1rem !important;
+        font-weight: 400 !important;
+        transition: color 0.3s !important;
     }
 
     .mobile-menu-links li a:hover {
-        color: #ddd;
+        color: #ddd !important;
     }
 }
 
