@@ -101,24 +101,36 @@ body {
     cursor: pointer;
 }
 
-/* Search Input Field */
+/* Search Container Styling */
+.search-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Hidden Search Input by default */
 .search-input {
     display: none;
-    width: 200px;
+    width: 0;
     padding: 0.5rem;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
     position: absolute;
-    top: 0;
+    top: 100%; /* Positions the input below the icon */
     right: 0;
     z-index: 1;
-    transition: width 0.3s ease;
+    opacity: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+    transition: width 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
+/* Active Search Input Styling */
 .search-container.active .search-input {
     display: block;
+    width: 200px; /* Expands to full width */
+    opacity: 1;
 }
 
 /* Navigation Menu Styling */

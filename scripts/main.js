@@ -12,13 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Toggle search input visibility on click
-document.getElementById("search-icon").addEventListener("click", function() {
+// Toggle search input visibility on click with smooth dropdown effect
+document.getElementById("search-icon").addEventListener("click", function(event) {
+    event.stopPropagation(); // Prevents immediate closing due to the document click listener
     const searchContainer = document.querySelector(".search-container");
-    searchContainer.classList.toggle("active");
-    
-    // Focus on the input field when it appears
     const searchInput = document.getElementById("search-input");
+
+    // Toggle the active class to initiate the dropdown
+    searchContainer.classList.toggle("active");
+
+    // Focus on the input field when it appears, clear it if closed
     if (searchContainer.classList.contains("active")) {
         searchInput.focus();
     } else {
@@ -26,12 +29,12 @@ document.getElementById("search-icon").addEventListener("click", function() {
     }
 });
 
-// Close search input if clicking outside
+// Close search input if clicking outside, with smooth effect
 document.addEventListener("click", function(event) {
     const searchContainer = document.querySelector(".search-container");
     const searchInput = document.getElementById("search-input");
 
-    // Check if the click happened outside the search container
+    // Check if the click happened outside the search container and icon
     if (!searchContainer.contains(event.target) && searchContainer.classList.contains("active")) {
         searchContainer.classList.remove("active");
         searchInput.value = ""; // Clear input when closed
