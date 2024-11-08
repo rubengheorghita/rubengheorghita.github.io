@@ -37,45 +37,35 @@ body {
     text-align: center;
     flex-grow: 1;
 }
-
-/* Styling for Text Icons as Links (Search, Account, Cart) */
-.icon-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    cursor: pointer;
-    margin-left: 20px;
-    transition: color 0.3s;
-}
-
-.icon-text:hover {
-    color: #666;
-}
-
 /* Header Icons Styling */
 .header-icons {
     display: flex;
     align-items: center;
+    gap: 15px;
     position: absolute;
-    right: 2rem; /* Keeps the icons on the right */
+    right: 2rem;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Ensuring the icons appear in the correct order */
+/* Individual Icon Styling */
 .search-container {
-    display: inline-block;
-    margin-right: auto; /* Pushes search icon to the far left */
-    order: 1;
+    margin-right: auto; /* Ensures search icon stays on the left */
 }
 
 .account-icon {
-    margin-right: 15px; /* Adds space between the icons */
-    order: 2; /* Keeps account icon in the middle */
+    margin-right: 15px; /* Adds space between account and cart icons */
 }
 
 .cart-icon {
-    order: 3; /* Places cart icon to the far right */
+    /* Right-most icon, so no additional styling needed here */
+}
+
+/* Styling for the Icons */
+.icon {
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
 }
 
 /* Search Input Field */
