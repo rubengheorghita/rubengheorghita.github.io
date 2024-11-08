@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Toggle search input visibility on click with smooth dropdown effect
+// Toggle search input visibility with smooth dropdown effect for mobile
 document.getElementById("search-icon").addEventListener("click", function(event) {
     event.stopPropagation(); // Prevents immediate closing due to the document click listener
     const searchContainer = document.querySelector(".search-container");
@@ -96,7 +96,8 @@ document.addEventListener('click', function(event) {
 
 // Toggle mobile menu visibility function for calling
 function toggleMobileMenu() {
-    document.querySelector('.mobile-menu-panel').classList.toggle('active');
+    const mobileMenu = document.querySelector('.mobile-menu-panel');
+    mobileMenu.classList.toggle('active');
 }
 
 // Prevent unwanted menu closing when interacting with menu items

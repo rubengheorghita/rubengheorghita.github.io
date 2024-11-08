@@ -17,15 +17,43 @@
     display: inline-block;
     font-size: 1.4rem;
     order: 1;
-    margin-right: auto;
+    margin-right: 10px; /* Adjusts spacing */
 }
 
 /* Search Icon Styling */
-.search-icon {
+.search-container {
     display: inline-block;
     font-size: 1.4rem;
     order: 2;
-    margin-left: 10px;
+    position: relative;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-input {
+    display: none;
+    width: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    top: 100%; /* Positions below the search icon */
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.search-container.active .search-input {
+    display: block;
+    width: 150px;
+    opacity: 1;
 }
 
 /* Center and adjust logo font size */
@@ -47,7 +75,7 @@
     display: inline-block;
     font-size: 1.4rem;
     order: 4;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 /* Mobile Menu Panel */
