@@ -37,11 +37,10 @@ body {
     text-align: center;
     flex-grow: 1;
 }
-/* Header Icons Styling */
+/* Header Icons Container */
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
     position: absolute;
     right: 2rem;
     top: 50%;
@@ -50,15 +49,38 @@ body {
 
 /* Individual Icon Styling */
 .search-container {
-    margin-right: auto; /* Ensures search icon stays on the left */
+    margin-right: 20px; /* Adjust as needed for spacing */
 }
 
-.account-icon {
-    margin-right: 15px; /* Adds space between account and cart icons */
+#search-icon {
+    cursor: pointer;
 }
 
-.cart-icon {
-    /* Right-most icon, so no additional styling needed here */
+.search-input {
+    display: none;
+    width: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+/* Show search input field on active */
+.search-container.active .search-input {
+    display: block;
+}
+
+.account-icon, .cart-icon {
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
 /* Styling for the Icons */
