@@ -41,15 +41,18 @@ document.addEventListener("click", function(event) {
     }
 });
 
+// Function to open a panel by ID and stop event propagation
 function openPanel(panelId) {
     document.getElementById(panelId).classList.add('active');
+    event.stopPropagation(); // Prevent the document-level click listener from closing the panel
 }
 
+// Function to close a panel by ID
 function closePanel(panelId) {
     document.getElementById(panelId).classList.remove('active');
 }
 
-// Close account and cart panels when clicking outside
+// Close account and cart panels when clicking outside, with modifications
 document.addEventListener('click', function(event) {
     const accountPanel = document.getElementById('account-panel');
     const cartPanel = document.getElementById('cart-panel');
@@ -63,6 +66,15 @@ document.addEventListener('click', function(event) {
     if (!cartPanel.contains(event.target) && event.target !== cartIcon) {
         closePanel('cart-panel');
     }
+});
+
+// Event listeners for account and cart icons to open respective panels
+document.querySelector('.account-icon').addEventListener('click', function(event) {
+    openPanel('account-panel');
+});
+
+document.querySelector('.cart-icon').addEventListener('click', function(event) {
+    openPanel('cart-panel');
 });
 
 // JavaScript to toggle the mobile menu
